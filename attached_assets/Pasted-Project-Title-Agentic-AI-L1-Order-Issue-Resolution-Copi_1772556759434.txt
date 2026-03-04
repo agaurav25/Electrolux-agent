@@ -1,0 +1,218 @@
+Project Title: Agentic AI – L1 Order Issue Resolution Copilot (POC)
+
+Build a professional Streamlit-based demo application that simulates an Agentic AI-powered L1 Support Assistant for tracking and resolving order issues in an enterprise order management ecosystem.
+
+The application should demonstrate how AI reduces manual effort for L1 agents by automatically diagnosing order delays, identifying integration failures, and recommending or executing corrective actions.
+
+🎯 Objective
+
+Simulate a real-world L1 support scenario where:
+
+Customers raise order-related queries.
+
+L1 agents must investigate across multiple backend systems.
+
+Orders may be stuck, delayed, or failing due to integration issues.
+
+The AI assistant should:
+
+Accept an Order ID.
+
+Retrieve order status from multiple mock systems.
+
+Detect delays and SLA breaches.
+
+Analyze integration failures.
+
+Provide root cause reasoning.
+
+Recommend next best resolution steps.
+
+Optionally simulate auto-remediation actions.
+
+Generate a customer-ready response summary.
+
+🏗 Technology Stack
+
+Python
+
+Streamlit
+
+Groq (LLM – llama3-70b or latest)
+
+Autogen (for multi-agent reasoning simulation)
+
+Mock order dataset (JSON/CSV)
+
+Logging module for tracking L1 interactions
+
+Plotly for dashboards
+
+Ensure clean, modular architecture.
+
+🧠 Agentic AI Structure (Simulated)
+
+Implement multi-agent orchestration using Autogen:
+
+1️⃣ Order Investigation Agent
+
+Fetches order details from Commerce, ERP, Payment, and Logistics (mock data).
+
+2️⃣ SLA Monitoring Agent
+
+Checks processing time vs SLA thresholds.
+
+Flags at-risk or breached orders.
+
+3️⃣ Integration Diagnostic Agent
+
+Reviews simulated system logs.
+
+Detects payment failure, ERP rejection, logistics congestion, API timeout, etc.
+
+4️⃣ Resolution Recommendation Agent
+
+Suggests:
+
+Retry ERP submission
+
+Re-trigger payment validation
+
+Escalate to L2
+
+Raise ServiceNow ticket (mock)
+
+Can simulate automated corrective action.
+
+5️⃣ Customer Communication Agent
+
+Generates a clear, professional explanation for the customer.
+
+Avoids technical jargon.
+
+🖥 Application UI Requirements
+Page 1 – L1 Order Investigation Console
+
+Input: Order ID
+
+Button: “Investigate Issue”
+
+Display:
+
+Current lifecycle stage
+
+SLA status (On Track / At Risk / Breached)
+
+Integration health indicators
+
+AI-generated root cause summary
+
+Recommended resolution
+
+Button: “Simulate Auto-Resolve”
+
+Page 2 – L1 Support Operations Dashboard
+
+Show operational metrics such as:
+
+Total open orders
+
+Orders at risk
+
+SLA breaches
+
+Most common failure category
+
+Average resolution time (simulated)
+
+Trend chart of recurring issues
+
+Use Plotly charts.
+
+Page 3 – Customer Response Generator
+
+Input: Order ID
+
+Output:
+
+AI-generated explanation message
+
+Estimated resolution timeline
+
+Copy-to-clipboard feature
+
+📊 Mock Data Requirements
+
+Each order should include:
+
+order_id
+
+region
+
+order_created_time
+
+payment_status
+
+erp_status
+
+fulfillment_status
+
+shipment_status
+
+sla_threshold
+
+processing_time
+
+integration_error_logs
+
+Preload 8–10 demo orders including:
+
+Normal flow
+
+Payment authorization failure
+
+ERP submission stuck
+
+Logistics delay
+
+SLA breach case
+
+Partial fulfillment issue
+
+🎬 Demonstration Goals
+
+The app must clearly show:
+
+How L1 agents previously checked multiple systems manually.
+
+How AI consolidates system information instantly.
+
+How AI reduces escalation to L2.
+
+How intelligent explanations improve customer communication.
+
+How autonomous remediation shortens resolution cycles.
+
+🔐 Constraints
+
+No real external APIs.
+
+Use simulated datasets.
+
+Replit-compatible.
+
+Modular code structure.
+
+Include requirements.txt.
+
+Add clean comments for readability.
+
+🏁 Expected Outcome
+
+The demo should feel like:
+
+An enterprise-grade L1 support console.
+
+A practical Agentic AI application.
+
+A clear shift from reactive support to AI-assisted issue resolution.

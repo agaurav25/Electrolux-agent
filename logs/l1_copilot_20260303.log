@@ -1,0 +1,280 @@
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [Orchestrator] Starting multi-agent investigation pipeline
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [OrderInvestigationAgent] Investigation complete – stage: Shipment
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [SLAMonitorAgent] SLA status: On Track
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [ResolutionAgent] Generating resolution recommendations
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [CustomerCommAgent] Generating customer response
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [CustomerCommAgent] Customer response generated
+2026-03-03 16:59:18 | INFO     | [ORD-1001] [Orchestrator] Multi-agent pipeline complete
+2026-03-03 17:00:32 | INFO     | [ORD-1001] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1001] [OrderInvestigationAgent] Investigation complete – stage: Shipment
+2026-03-03 17:00:32 | INFO     | [ORD-1001] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1001] [SLAMonitorAgent] SLA status: On Track
+2026-03-03 17:00:32 | INFO     | [ORD-1001] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1002] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1002] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:00:32 | INFO     | [ORD-1002] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1002] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:00:32 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Authorization Failure
+2026-03-03 17:00:32 | INFO     | [ORD-1003] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1003] [OrderInvestigationAgent] Investigation complete – stage: ERP Submission
+2026-03-03 17:00:32 | INFO     | [ORD-1003] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1003] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:00:32 | INFO     | [ORD-1003] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1003] [IntegrationDiagnosticAgent] Diagnosis complete – category: ERP Service Outage
+2026-03-03 17:00:32 | INFO     | [ORD-1004] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1004] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:00:32 | INFO     | [ORD-1004] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1004] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:00:32 | INFO     | [ORD-1004] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1004] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics Hub Congestion
+2026-03-03 17:00:32 | INFO     | [ORD-1005] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1005] [OrderInvestigationAgent] Investigation complete – stage: Processing
+2026-03-03 17:00:32 | INFO     | [ORD-1005] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1005] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:00:32 | INFO     | [ORD-1005] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1005] [IntegrationDiagnosticAgent] Diagnosis complete – category: Inventory/Stock Issue
+2026-03-03 17:00:32 | INFO     | [ORD-1006] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1006] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:00:32 | INFO     | [ORD-1006] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1006] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:00:32 | INFO     | [ORD-1006] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1006] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics/Carrier Delay
+2026-03-03 17:00:32 | INFO     | [ORD-1007] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1007] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:00:32 | INFO     | [ORD-1007] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1007] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:00:32 | INFO     | [ORD-1007] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1007] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Gateway Timeout
+2026-03-03 17:00:32 | INFO     | [ORD-1008] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1008] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:00:32 | INFO     | [ORD-1008] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1008] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:00:32 | INFO     | [ORD-1008] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1008] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment + ERP Combined Failure
+2026-03-03 17:00:32 | INFO     | [ORD-1009] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1009] [OrderInvestigationAgent] Investigation complete – stage: Processing
+2026-03-03 17:00:32 | INFO     | [ORD-1009] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1009] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:00:32 | INFO     | [ORD-1009] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1009] [IntegrationDiagnosticAgent] Diagnosis complete – category: General Integration Error
+2026-03-03 17:00:32 | INFO     | [ORD-1010] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:00:32 | INFO     | [ORD-1010] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:00:32 | INFO     | [ORD-1010] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:00:32 | INFO     | [ORD-1010] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:00:32 | INFO     | [ORD-1010] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:00:32 | INFO     | [ORD-1010] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics Hub Congestion
+2026-03-03 17:02:23 | INFO     | [ORD-1001] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1001] [OrderInvestigationAgent] Investigation complete – stage: Shipment
+2026-03-03 17:02:23 | INFO     | [ORD-1001] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1001] [SLAMonitorAgent] SLA status: On Track
+2026-03-03 17:02:23 | INFO     | [ORD-1001] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1002] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1002] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:02:23 | INFO     | [ORD-1002] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1002] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:02:23 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Authorization Failure
+2026-03-03 17:02:23 | INFO     | [ORD-1003] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1003] [OrderInvestigationAgent] Investigation complete – stage: ERP Submission
+2026-03-03 17:02:23 | INFO     | [ORD-1003] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1003] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:02:23 | INFO     | [ORD-1003] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1003] [IntegrationDiagnosticAgent] Diagnosis complete – category: ERP Service Outage
+2026-03-03 17:02:23 | INFO     | [ORD-1004] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1004] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:02:23 | INFO     | [ORD-1004] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1004] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:02:23 | INFO     | [ORD-1004] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1004] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics Hub Congestion
+2026-03-03 17:02:23 | INFO     | [ORD-1005] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1005] [OrderInvestigationAgent] Investigation complete – stage: Processing
+2026-03-03 17:02:23 | INFO     | [ORD-1005] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1005] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:02:23 | INFO     | [ORD-1005] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1005] [IntegrationDiagnosticAgent] Diagnosis complete – category: Inventory/Stock Issue
+2026-03-03 17:02:23 | INFO     | [ORD-1006] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1006] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:02:23 | INFO     | [ORD-1006] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1006] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:02:23 | INFO     | [ORD-1006] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1006] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics/Carrier Delay
+2026-03-03 17:02:23 | INFO     | [ORD-1007] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1007] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:02:23 | INFO     | [ORD-1007] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1007] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:02:23 | INFO     | [ORD-1007] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1007] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Gateway Timeout
+2026-03-03 17:02:23 | INFO     | [ORD-1008] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1008] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:02:23 | INFO     | [ORD-1008] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1008] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:02:23 | INFO     | [ORD-1008] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1008] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment + ERP Combined Failure
+2026-03-03 17:02:23 | INFO     | [ORD-1009] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1009] [OrderInvestigationAgent] Investigation complete – stage: Processing
+2026-03-03 17:02:23 | INFO     | [ORD-1009] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1009] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:02:23 | INFO     | [ORD-1009] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1009] [IntegrationDiagnosticAgent] Diagnosis complete – category: General Integration Error
+2026-03-03 17:02:23 | INFO     | [ORD-1010] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:02:23 | INFO     | [ORD-1010] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:02:23 | INFO     | [ORD-1010] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:02:23 | INFO     | [ORD-1010] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:02:23 | INFO     | [ORD-1010] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:02:23 | INFO     | [ORD-1010] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics Hub Congestion
+2026-03-03 17:10:24 | INFO     | [ORD-1001] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1001] [OrderInvestigationAgent] Investigation complete – stage: Shipment
+2026-03-03 17:10:24 | INFO     | [ORD-1001] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1001] [SLAMonitorAgent] SLA status: On Track
+2026-03-03 17:10:24 | INFO     | [ORD-1001] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1002] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1002] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:10:24 | INFO     | [ORD-1002] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1002] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:10:24 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Authorization Failure
+2026-03-03 17:10:24 | INFO     | [ORD-1003] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1003] [OrderInvestigationAgent] Investigation complete – stage: ERP Submission
+2026-03-03 17:10:24 | INFO     | [ORD-1003] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1003] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:10:24 | INFO     | [ORD-1003] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1003] [IntegrationDiagnosticAgent] Diagnosis complete – category: ERP Service Outage
+2026-03-03 17:10:24 | INFO     | [ORD-1004] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1004] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:10:24 | INFO     | [ORD-1004] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1004] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:10:24 | INFO     | [ORD-1004] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1004] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics Hub Congestion
+2026-03-03 17:10:24 | INFO     | [ORD-1005] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1005] [OrderInvestigationAgent] Investigation complete – stage: Processing
+2026-03-03 17:10:24 | INFO     | [ORD-1005] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1005] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:10:24 | INFO     | [ORD-1005] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1005] [IntegrationDiagnosticAgent] Diagnosis complete – category: Inventory/Stock Issue
+2026-03-03 17:10:24 | INFO     | [ORD-1006] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1006] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:10:24 | INFO     | [ORD-1006] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1006] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:10:24 | INFO     | [ORD-1006] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1006] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics/Carrier Delay
+2026-03-03 17:10:24 | INFO     | [ORD-1007] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1007] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:10:24 | INFO     | [ORD-1007] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1007] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:10:24 | INFO     | [ORD-1007] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1007] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Gateway Timeout
+2026-03-03 17:10:24 | INFO     | [ORD-1008] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1008] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:10:24 | INFO     | [ORD-1008] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1008] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:10:24 | INFO     | [ORD-1008] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1008] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment + ERP Combined Failure
+2026-03-03 17:10:24 | INFO     | [ORD-1009] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1009] [OrderInvestigationAgent] Investigation complete – stage: Processing
+2026-03-03 17:10:24 | INFO     | [ORD-1009] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1009] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:10:24 | INFO     | [ORD-1009] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1009] [IntegrationDiagnosticAgent] Diagnosis complete – category: General Integration Error
+2026-03-03 17:10:24 | INFO     | [ORD-1010] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:10:24 | INFO     | [ORD-1010] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:10:24 | INFO     | [ORD-1010] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:10:24 | INFO     | [ORD-1010] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:10:24 | INFO     | [ORD-1010] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:10:24 | INFO     | [ORD-1010] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics Hub Congestion
+2026-03-03 17:12:50 | INFO     | [ORD-1001] [Orchestrator] Starting multi-agent investigation pipeline
+2026-03-03 17:12:50 | INFO     | [ORD-1001] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:12:50 | INFO     | [ORD-1001] [OrderInvestigationAgent] Investigation complete – stage: Shipment
+2026-03-03 17:12:50 | INFO     | [ORD-1001] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:12:50 | INFO     | [ORD-1001] [SLAMonitorAgent] SLA status: On Track
+2026-03-03 17:12:50 | INFO     | [ORD-1001] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:12:50 | INFO     | [ORD-1001] [ResolutionAgent] Generating resolution recommendations
+2026-03-03 17:12:50 | INFO     | [ORD-1001] [CustomerCommAgent] Generating customer response
+2026-03-03 17:12:51 | INFO     | [ORD-1001] [CustomerCommAgent] Customer response generated
+2026-03-03 17:12:51 | INFO     | [ORD-1001] [Orchestrator] Multi-agent pipeline complete
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [Orchestrator] Starting multi-agent investigation pipeline
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Authorization Failure
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [ResolutionAgent] Generating resolution recommendations
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [ResolutionAgent] Generated 3 recommendations, escalation: True
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [CustomerCommAgent] Generating customer response
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [CustomerCommAgent] Customer response generated
+2026-03-03 17:13:14 | INFO     | [ORD-1002] [Orchestrator] Multi-agent pipeline complete
+2026-03-03 17:13:38 | INFO     | [ORD-1001] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1001] [OrderInvestigationAgent] Investigation complete – stage: Shipment
+2026-03-03 17:13:38 | INFO     | [ORD-1001] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1001] [SLAMonitorAgent] SLA status: On Track
+2026-03-03 17:13:38 | INFO     | [ORD-1001] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1002] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1002] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:13:38 | INFO     | [ORD-1002] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1002] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:13:38 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Authorization Failure
+2026-03-03 17:13:38 | INFO     | [ORD-1003] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1003] [OrderInvestigationAgent] Investigation complete – stage: ERP Submission
+2026-03-03 17:13:38 | INFO     | [ORD-1003] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1003] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:13:38 | INFO     | [ORD-1003] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1003] [IntegrationDiagnosticAgent] Diagnosis complete – category: ERP Service Outage
+2026-03-03 17:13:38 | INFO     | [ORD-1004] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1004] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:13:38 | INFO     | [ORD-1004] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1004] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:13:38 | INFO     | [ORD-1004] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1004] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics Hub Congestion
+2026-03-03 17:13:38 | INFO     | [ORD-1005] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1005] [OrderInvestigationAgent] Investigation complete – stage: Processing
+2026-03-03 17:13:38 | INFO     | [ORD-1005] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1005] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:13:38 | INFO     | [ORD-1005] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1005] [IntegrationDiagnosticAgent] Diagnosis complete – category: Inventory/Stock Issue
+2026-03-03 17:13:38 | INFO     | [ORD-1006] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1006] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:13:38 | INFO     | [ORD-1006] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1006] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:13:38 | INFO     | [ORD-1006] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1006] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics/Carrier Delay
+2026-03-03 17:13:38 | INFO     | [ORD-1007] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1007] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:13:38 | INFO     | [ORD-1007] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1007] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:13:38 | INFO     | [ORD-1007] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1007] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Gateway Timeout
+2026-03-03 17:13:38 | INFO     | [ORD-1008] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1008] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:13:38 | INFO     | [ORD-1008] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1008] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:13:38 | INFO     | [ORD-1008] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1008] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment + ERP Combined Failure
+2026-03-03 17:13:38 | INFO     | [ORD-1009] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1009] [OrderInvestigationAgent] Investigation complete – stage: Processing
+2026-03-03 17:13:38 | INFO     | [ORD-1009] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1009] [SLAMonitorAgent] SLA status: At Risk
+2026-03-03 17:13:38 | INFO     | [ORD-1009] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1009] [IntegrationDiagnosticAgent] Diagnosis complete – category: General Integration Error
+2026-03-03 17:13:38 | INFO     | [ORD-1010] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:38 | INFO     | [ORD-1010] [OrderInvestigationAgent] Investigation complete – stage: Fulfillment
+2026-03-03 17:13:38 | INFO     | [ORD-1010] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:38 | INFO     | [ORD-1010] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:13:38 | INFO     | [ORD-1010] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:38 | INFO     | [ORD-1010] [IntegrationDiagnosticAgent] Diagnosis complete – category: Logistics Hub Congestion
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [Orchestrator] Starting multi-agent investigation pipeline
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [OrderInvestigationAgent] Starting order investigation
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [OrderInvestigationAgent] Investigation complete – stage: Payment
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [SLAMonitorAgent] Checking SLA compliance
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [SLAMonitorAgent] SLA status: Breached
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Analyzing integration logs
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [IntegrationDiagnosticAgent] Diagnosis complete – category: Payment Authorization Failure
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [ResolutionAgent] Generating resolution recommendations
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [ResolutionAgent] Generated 3 recommendations, escalation: True
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [CustomerCommAgent] Generating customer response
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [CustomerCommAgent] Customer response generated
+2026-03-03 17:13:55 | INFO     | [ORD-1002] [Orchestrator] Multi-agent pipeline complete
