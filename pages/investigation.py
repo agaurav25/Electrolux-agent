@@ -1,13 +1,154 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import time
 from data.mock_orders import get_order_ids
 from agents.orchestrator import run_full_investigation, run_auto_resolve
 
 BRAND_NAVY = "#041e42"
 
+HEALTH_COLORS = {
+    "Healthy": {"bg": "#e8f5e9", "border": "#2e8b57", "icon": "#2e8b57", "glow": "rgba(46,139,87,0.15)", "label": "Healthy"},
+    "Degraded": {"bg": "#fff8e1", "border": "#d4a017", "icon": "#d4a017", "glow": "rgba(212,160,23,0.15)", "label": "Degraded"},
+    "Critical": {"bg": "#fce4ec", "border": "#c0392b", "icon": "#c0392b", "glow": "rgba(192,57,43,0.2)", "label": "Critical"}
+}
+
+SYSTEM_ICONS = {
+    "Commerce/OMS": '<svg viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
+    "Payment Gateway": '<svg viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>',
+    "ERP System": '<svg viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>',
+    "Fulfillment/WMS": '<svg viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
+    "Logistics": '<svg viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>'
+}
+
+PIPELINE_CSS = """
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    .health-pipeline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        padding: 20px 8px;
+        overflow-x: auto;
+        font-family: 'Inter', -apple-system, sans-serif;
+    }
+    .sys-node {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 128px;
+        max-width: 148px;
+        padding: 16px 10px 14px;
+        border-radius: 14px;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .sys-node:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(4,30,66,0.12) !important;
+    }
+    .sys-icon { margin-bottom: 8px; }
+    .sys-name {
+        font-size: 11.5px;
+        font-weight: 700;
+        color: #041e42;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+    .sys-badge {
+        font-size: 9.5px;
+        font-weight: 600;
+        color: white;
+        padding: 3px 10px;
+        border-radius: 10px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+    }
+    .sys-detail {
+        font-size: 10px;
+        color: #64748b;
+        line-height: 1.3;
+    }
+    .arrow-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        min-width: 44px;
+        position: relative;
+    }
+    .break-x {
+        position: absolute;
+        top: -2px;
+        font-size: 14px;
+        color: #c0392b;
+        font-weight: 800;
+    }
+    @keyframes pulse-red {
+        0%, 100% { box-shadow: 0 4px 16px rgba(192,57,43,0.2); }
+        50% { box-shadow: 0 4px 24px rgba(192,57,43,0.45); }
+    }
+    @keyframes pulse-amber {
+        0%, 100% { box-shadow: 0 4px 16px rgba(212,160,23,0.15); }
+        50% { box-shadow: 0 4px 20px rgba(212,160,23,0.35); }
+    }
+    .pulse-critical { animation: pulse-red 2s ease-in-out infinite; }
+    .pulse-warning { animation: pulse-amber 2.5s ease-in-out infinite; }
+</style>
+"""
+
+
+def _build_node_html(sys_name, sys_info):
+    health = sys_info["health"]
+    colors = HEALTH_COLORS.get(health, HEALTH_COLORS["Healthy"])
+    status_text = sys_info["status"]
+    if len(status_text) > 24:
+        status_text = status_text[:22] + "..."
+    icon_svg = SYSTEM_ICONS.get(sys_name, SYSTEM_ICONS["Commerce/OMS"]).replace("{color}", colors["icon"])
+    pulse = "pulse-critical" if health == "Critical" else ("pulse-warning" if health == "Degraded" else "")
+    return (
+        f'<div class="sys-node {pulse}" style="background:{colors["bg"]};'
+        f'border:2px solid {colors["border"]};box-shadow:0 4px 16px {colors["glow"]};">'
+        f'<div class="sys-icon">{icon_svg}</div>'
+        f'<div class="sys-name">{sys_name}</div>'
+        f'<div class="sys-badge" style="background:{colors["border"]};">{colors["label"]}</div>'
+        f'<div class="sys-detail">{status_text}</div>'
+        f'</div>'
+    )
+
+
+def _build_arrow_html(idx, from_health, to_health):
+    is_broken = from_health == "Critical"
+    color = "#c0392b" if from_health == "Critical" or to_health == "Critical" else (
+        "#d4a017" if from_health == "Degraded" or to_health == "Degraded" else "#2e8b57")
+    dash = ' stroke-dasharray="6,4"' if is_broken else ""
+    x_mark = '<span class="break-x">&#10005;</span>' if is_broken else ""
+    return (
+        f'<div class="arrow-wrap">'
+        f'<svg width="44" height="24" viewBox="0 0 44 24">'
+        f'<defs><marker id="ah{idx}" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">'
+        f'<polygon points="0 0, 8 3, 0 6" fill="{color}"/></marker></defs>'
+        f'<line x1="0" y1="12" x2="32" y2="12" stroke="{color}" stroke-width="2.5"{dash} marker-end="url(#ah{idx})"/>'
+        f'</svg>{x_mark}</div>'
+    )
+
+
+def _render_integration_health_visual(systems):
+    sys_list = list(systems.items())
+    body = ""
+    for i, (name, info) in enumerate(sys_list):
+        body += _build_node_html(name, info)
+        if i < len(sys_list) - 1:
+            next_health = sys_list[i + 1][1]["health"]
+            body += _build_arrow_html(i, info["health"], next_health)
+
+    html = PIPELINE_CSS + '<div class="health-pipeline">' + body + '</div>'
+    components.html(html, height=210, scrolling=False)
+
 
 def render():
-    st.markdown(f"## Order Investigation Console")
+    st.markdown("## Order Investigation Console")
     st.caption("Agentic AI-powered multi-system investigation for rapid order issue diagnosis")
 
     col1, col2 = st.columns([2, 1])
@@ -106,14 +247,7 @@ def _display_results(result):
     st.divider()
 
     st.markdown("#### Integration Health Monitor")
-    sys_cols = st.columns(5)
-    systems = investigation["systems"]
-    for i, (sys_name, sys_info) in enumerate(systems.items()):
-        with sys_cols[i]:
-            health = sys_info["health"]
-            icon = {"Healthy": ":green_circle:", "Degraded": ":orange_circle:", "Critical": ":red_circle:"}.get(health, ":white_circle:")
-            st.markdown(f"{icon} **{sys_name}**")
-            st.caption(f"Status: {sys_info['status']}")
+    _render_integration_health_visual(investigation["systems"])
 
     st.divider()
 
